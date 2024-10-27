@@ -51,7 +51,7 @@ jobs:
           chmod +x /tmp/luci-app-diskman/CONTROL/postinst
           wget -O /tmp/ipkg-build https://raw.githubusercontent.com/openwrt/openwrt/openwrt-23.05/scripts/ipkg-build && \
           chmod +x /tmp/ipkg-build && \
-          /tmp/ipkg-build -o root -g root /tmp/luci-app-diskman /tmp
+          /tmp/ipkg-build /tmp/luci-app-diskman /tmp
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.0.0
